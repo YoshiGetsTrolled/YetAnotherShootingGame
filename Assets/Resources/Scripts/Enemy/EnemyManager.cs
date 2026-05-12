@@ -40,11 +40,12 @@ public class EnemyManager : MonoBehaviour , IDamageable
         }
     }
 
-    public void StartMove(Vector2 start, Vector2 end,float duration)
+    public void StartMove(Vector2 start, Vector2 end,float duration,bool destroy)
     {
         startPos = start; 
         endPos = end;
         moveSpeed = duration;
+        destroyAfterMove = destroy;
 
         StartCoroutine(MoveCoroutine());
     }

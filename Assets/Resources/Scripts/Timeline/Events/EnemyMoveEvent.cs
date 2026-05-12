@@ -17,8 +17,7 @@ public class EnemyMoveEvent : TimelineEvent
         }
         if (target != null)
         {
-            target.StartMove(startPos, endPos, duration);
-            target.destroyAfterMove = destroyAfterMove;
+            target.StartMove(startPos, endPos, duration,destroyAfterMove);
         }
     }
 }

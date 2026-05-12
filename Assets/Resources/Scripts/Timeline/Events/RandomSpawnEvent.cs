@@ -97,9 +97,7 @@ public class RandomSpawnEvent : TimelineEvent
 
                 //コンポーネント取得、移動処理開始
                 EnemyManager enemyManager = enemy.GetComponent<EnemyManager>();
-                enemyManager.StartMove(spawnPos, endPos, UnityEngine.Random.Range(speedRange.x, speedRange.y + 1));
-
-                enemyManager.destroyAfterMove = true;
+                enemyManager.StartMove(spawnPos, endPos, UnityEngine.Random.Range(speedRange.x, speedRange.y + 1),true);
             }
 
             yield return null;
