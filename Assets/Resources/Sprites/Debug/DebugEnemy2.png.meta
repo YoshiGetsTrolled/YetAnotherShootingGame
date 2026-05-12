@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 5eaa5a39d9d2cae4c89e85b77abdd2e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4571401710828595747
+    second: DebugEnemy2_0
+  - first:
+      213: -5725237856652547921
+    second: DebugEnemy2_1
+  - first:
+      213: -7418986907387867496
+    second: DebugEnemy2_2
+  - first:
+      213: -2143320703644014351
+    second: DebugEnemy2_3
+  - first:
+      213: 7118179316032602720
+    second: DebugEnemy2_4
+  - first:
+      213: -5508161181413539437
+    second: DebugEnemy2_5
+  - first:
+      213: 4863480673798333234
+    second: DebugEnemy2_6
+  - first:
+      213: 8742030957664887653
+    second: DebugEnemy2_7
+  - first:
+      213: 7276300668301297758
+    second: DebugEnemy2_8
+  - first:
+      213: 179794304014938271
+    second: DebugEnemy2_9
+  - first:
+      213: -800505773337088381
+    second: DebugEnemy2_10
+  - first:
+      213: -1261656194438314320
+    second: DebugEnemy2_11
+  - first:
+      213: -8213866439658835995
+    second: DebugEnemy2_12
+  - first:
+      213: -2718361093735181753
+    second: DebugEnemy2_13
+  - first:
+      213: 53641604648823567
+    second: DebugEnemy2_14
+  - first:
+      213: -5570971953824533706
+    second: DebugEnemy2_15
+  - first:
+      213: -1565623981343252015
+    second: DebugEnemy2_16
+  - first:
+      213: 1191085636177507836
+    second: DebugEnemy2_17
+  - first:
+      213: -746311079644316346
+    second: DebugEnemy2_18
+  - first:
+      213: -2343082347405133191
+    second: DebugEnemy2_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DebugEnemy2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 145
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5d2744d5e1f80c0800000000000000
+      internalID: -4571401710828595747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1026
+        width: 91
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa82b93c08edb80b0800000000000000
+      internalID: -5725237856652547921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1010
+        width: 214
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e4fd717b67a0990800000000000000
+      internalID: -7418986907387867496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_3
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 950
+        width: 253
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8ee830d256142e0800000000000000
+      internalID: -2143320703644014351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_4
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 930
+        width: 95
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06208abcf5ad8c260800000000000000
+      internalID: 7118179316032602720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 532
+        width: 223
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3910048c6941f83b0800000000000000
+      internalID: -5508161181413539437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_6
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 475
+        width: 221
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2332abda7ed8e7340800000000000000
+      internalID: 4863480673798333234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_7
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 292
+        width: 249
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5636517b6dee15970800000000000000
+      internalID: 8742030957664887653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_8
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 773
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58490508ec9af460800000000000000
+      internalID: 7276300668301297758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_9
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 629
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90f27787f1ce7200800000000000000
+      internalID: 179794304014938271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_10
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 329
+        width: 147
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ee79b8d3804e4f0800000000000000
+      internalID: -800505773337088381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_11
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 467
+        width: 42
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b645dd2062bd7ee0800000000000000
+      internalID: -1261656194438314320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 36
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efe1a7fdfb720e80800000000000000
+      internalID: -8213866439658835995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_13
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 104
+        width: 234
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7421cacdcf0764ad0800000000000000
+      internalID: -2718361093735181753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_14
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 245
+        width: 44
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b664651c29eb000800000000000000
+      internalID: 53641604648823567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 370
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633ff96368eefa2b0800000000000000
+      internalID: -5570971953824533706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 0
+        width: 182
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1e334b849c54ae0800000000000000
+      internalID: -1565623981343252015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 0
+        width: 131
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf53e615316978010800000000000000
+      internalID: 1191085636177507836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_18
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 139
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dbcd5f60294a5f0800000000000000
+      internalID: -746311079644316346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DebugEnemy2_19
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 0
+        width: 152
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97abd6be403bb7fd0800000000000000
+      internalID: -2343082347405133191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DebugEnemy2_0: -4571401710828595747
+      DebugEnemy2_1: -5725237856652547921
+      DebugEnemy2_10: -800505773337088381
+      DebugEnemy2_11: -1261656194438314320
+      DebugEnemy2_12: -8213866439658835995
+      DebugEnemy2_13: -2718361093735181753
+      DebugEnemy2_14: 53641604648823567
+      DebugEnemy2_15: -5570971953824533706
+      DebugEnemy2_16: -1565623981343252015
+      DebugEnemy2_17: 1191085636177507836
+      DebugEnemy2_18: -746311079644316346
+      DebugEnemy2_19: -2343082347405133191
+      DebugEnemy2_2: -7418986907387867496
+      DebugEnemy2_3: -2143320703644014351
+      DebugEnemy2_4: 7118179316032602720
+      DebugEnemy2_5: -5508161181413539437
+      DebugEnemy2_6: 4863480673798333234
+      DebugEnemy2_7: 8742030957664887653
+      DebugEnemy2_8: 7276300668301297758
+      DebugEnemy2_9: 179794304014938271
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
