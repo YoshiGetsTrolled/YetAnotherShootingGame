@@ -5,8 +5,7 @@ public class GameManager : MonoBehaviour
     [Header("パラメーター")]
     public bool isPause;
 
-    [SerializeField]
-    float curTime;
+    public float curTime;
     public float bgScrollSpeed;
 
     [Header("オブジェクト、コンポーネント")]

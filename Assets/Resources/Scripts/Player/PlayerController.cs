@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
     [Header("コンポーネント")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteDisplayer spriteDisplayer;
+    [SerializeField] private PlayerManager pm;
 
     [Header("動き")]
     public float moveSpeed = 1f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteDisplayer = GetComponent<SpriteDisplayer>();
+        pm = GetComponent<PlayerManager>();
     }
     private void FixedUpdate()
     {
@@ -37,13 +39,16 @@ public class PlayerController : MonoBehaviour
         }
         if (Inputs.buttonBDown)
         {
-            ShootBullet(new Vector2(0, 1), 8f);
+            if (pm.canUse3way)
+            {
+                ShootBullet(new Vector2(0, 1), 8f);
 
-            //右斜め前
-            ShootBullet(new Vector2(0.3f, 1), 7f);
+                //右斜め前
+                ShootBullet(new Vector2(0.3f, 1), 7f);
 
-            //左斜め前
-            ShootBullet(new Vector2(-0.3f, 1), 7f);
+                //左斜め前
+                ShootBullet(new Vector2(-0.3f, 1), 7f);
+            }
         }
     }
 
@@ -83,4 +88,17 @@ public class PlayerController : MonoBehaviour
         else if (dir.x == 0 && dir.y < 0) spriteDisplayer.curSpriteNum = 7; // 下
         else if (dir.x > 0 && dir.y < 0) spriteDisplayer.curSpriteNum = 8; // 右下
     }
+
+    #region interface
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var interactive = collision.GetComponent<IPlayerInteractive>();
+        if (interactive != null)
+        {
+            interactive.OnPlayerTouch(this,pm);
+        }
+    }
+
+    #endregion
 }

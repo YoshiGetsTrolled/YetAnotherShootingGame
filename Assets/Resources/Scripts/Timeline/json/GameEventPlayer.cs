@@ -1,24 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameEventTimelinePlayer : MonoBehaviour
 {
+    [Header("オブジェクト")]
     public GameEventData data;      // JSON から読み込んだイベント
     public EnemyManager enemy;      // 命令を送る対象
-
-
+    public GameManager gm;
+    
 
     private List<EnemyManager> spawnedEnemies = new List<EnemyManager>();
 
     private float timer = 0f;
     private int index = 0;
 
+    private void Start()
+    {
+        gm = FindFirstObjectByType<GameManager>();
+    }
+
     private void Update()
     {
+        timer = gm.curTime;
         if (data == null || data.events.Count == 0) return;
-
-        timer += Time.deltaTime;
 
         // イベントを順番に実行
         while (index < data.events.Count && timer >= data.events[index].time)
@@ -79,7 +85,7 @@ public class GameEventTimelinePlayer : MonoBehaviour
                 break;
 
             default:
-                Debug.LogWarning("ないんだな～そんなイベント：" + e.type);
+                Debug.LogError("ないんだな～そんなイベント：" + e.type);
                 break;
         }
     }
@@ -94,6 +100,11 @@ public class GameEventTimelinePlayer : MonoBehaviour
     private IEnumerator RandomSpawnEvent(GameEvent e)
     {
         UnityEngine.Random.InitState(e.seed);
+        if (!e.useSeed)
+        {
+            //現在時刻のミリ秒でシード値を初期化
+            UnityEngine.Random.InitState(DateTime.Now.Millisecond);
+        }
         float t = 0f;
 
         while (t < e.randomSpawnDuration)
@@ -113,14 +124,14 @@ public class GameEventTimelinePlayer : MonoBehaviour
                 {   //方向に応じて出現位置もランダムで設定
                     spawnPos = dir switch
                     {
-                        0 => new Vector2(-10, UnityEngine.Random.Range(-3f, 3f)),
-                        1 => new Vector2(10, UnityEngine.Random.Range(-3f, 3f)),
-                        _ => new Vector2(UnityEngine.Random.Range(-6f, 5f), 6)
+                        0 => new Vector2(-10, UnityEngine.Random.Range(-3f, 4f)),
+                        1 => new Vector2(10, UnityEngine.Random.Range(-3f, 4f)),
+                        _ => new Vector2(UnityEngine.Random.Range(-8f, 3.5f), 6)
                     };
                 }
                 else
                 {   //方向を固定する場合は上だけ
-                    spawnPos = new Vector2(UnityEngine.Random.Range(-6f, 5f), 6);
+                    spawnPos = new Vector2(UnityEngine.Random.Range(-8f, 3.5f), 6);
                 }
 
                 // 敵をランダムで選択

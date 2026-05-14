@@ -1,0 +1,20 @@
+{
+  "patterns": [
+    {
+      "name": "spread3",
+      "interval": 0.5,
+      "bullets": [
+        { "dirVec": { "x": 0, "y": -1 }, "speed": 5 },
+        { "dirVec": { "x": -0.3, "y": -1 }, "speed": 5 },
+        { "dirVec": { "x": 0.3, "y": -1 }, "speed": 5 }
+      ]
+    },
+    {
+      "name": "aimed",
+      "interval": 1.0,
+      "bullets": [
+        { "dir": "player", "speed": 6 }
+      ]
+    }
+  ]
+}

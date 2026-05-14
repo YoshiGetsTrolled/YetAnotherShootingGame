@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8874943834375005069}
   - component: {fileID: 797589924443557281}
   - component: {fileID: 5832356761029024586}
-  - component: {fileID: 5236967567044045610}
   - component: {fileID: 7575096488852683510}
+  - component: {fileID: 5893635976797880772}
   m_Layer: 0
-  m_Name: BulletBase_Player
+  m_Name: BulletBase_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.9910408, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.051181477, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,20 +127,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.49999997
---- !u!114 &5236967567044045610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922076750398575768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9ea506291c5cd04bb234fdb2c934cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveVec: {x: 0, y: 0}
-  moveSpeed: 0
 --- !u!50 &7575096488852683510
 Rigidbody2D:
   serializedVersion: 5
@@ -168,6 +154,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &5893635976797880772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922076750398575768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0f08c084ff1e34ab790e5a3c21cace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveVec: {x: 0, y: -10}
+  moveSpeed: 0
+  damage: 1
 --- !u!1 &3421510183383785495
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +392,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9904574, g: 1, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.15093501, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

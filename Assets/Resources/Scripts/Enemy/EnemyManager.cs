@@ -1,22 +1,33 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour , IDamageable
+public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 {
     [Header("パラメーター")]
     public int hp = 5;
 
     public bool canShoot;
-    public bool shootInterval;
-
+    public float shootInterval;
+    private float shootTimer;
+    [Header("弾")]
     public Vector2 shootVec;
     public float shootSpeed;
+    public Vector2 playerDir;
+    private GameObject player;
+
+    [Header("弾の管理システム")]
+    public string bulletPatternName;
 
     [Header("行動設定")]
     public Vector2 startPos;
     public Vector2 endPos;
     public float moveSpeed;
     public bool destroyAfterMove;
+
+    private void Start()
+    {
+        player = FindFirstObjectByType<PlayerController>().gameObject;
+    }
 
     private void Update()
     {
@@ -27,6 +38,23 @@ public class EnemyManager : MonoBehaviour , IDamageable
             transform.position.y < -15)
         {
             Destroy(gameObject);
+        }
+
+        //撃つよん
+        if (canShoot)
+        {
+            shootTimer += Time.deltaTime;
+            if (shootTimer >= shootInterval)
+            {
+                shootTimer = 0;
+            }
+        }
+
+
+        //プレイヤーに向いている、正規化したベクトル
+        if (player != null)
+        {
+            playerDir = (player.transform.position - transform.position).normalized;
         }
     }
 
@@ -76,4 +104,15 @@ public class EnemyManager : MonoBehaviour , IDamageable
     }
 
 
+
+
+    #region interface
+
+    public void OnPlayerTouch(PlayerController player, PlayerManager manager)
+    {
+        manager.ChangeHP(-1);
+        Destroy(gameObject);
+    }
+
+    #endregion
 }

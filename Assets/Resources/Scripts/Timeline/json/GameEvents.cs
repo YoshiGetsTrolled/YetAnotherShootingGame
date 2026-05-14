@@ -8,22 +8,22 @@ public class GameEvent
     public string type;
     public float time;
 
-    // spawn
+    [Header("スポーン")]
     public string prefab;
     public Vector2 spawnPos;
     public int HP;
 
-    // move
+    [Header("移動設定")]
     public int enemyIndex;
     public Vector2 start;
     public Vector2 end;
     public float duration;
     public bool destroyAfter;
 
-    // pause
+    [Header("ゲーム停止")]
     public float pauseDuration;
 
-    // random spawn
+    [Header("ランダム出現")]
     public string[] prefabs;
     public Vector2 HPRange;
     public Vector2 speedRange;
@@ -31,8 +31,9 @@ public class GameEvent
     public float randomSpawnDuration;
     public float spawnRate;
     public int seed;
+    public bool useSeed;
 
-    // scroll speed
+    [Header("背景スクロール")]
     public int scrollSpeed;
 }
 
