@@ -154,11 +154,6 @@ MonoBehaviour:
   shootSpeed: 0
   playerDir: {x: 0, y: 0}
   bulletPatternName: spread3
-  pattern:
-    name: spread3
-    interval: 0.5
-    bullets: []
-  bulletController: {fileID: 0}
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   moveSpeed: 0
