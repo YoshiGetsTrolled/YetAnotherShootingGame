@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
     [Header("パラメーター")]
     public int maxHp;
     public int hp;
     public int score;
+    public float invincibleTime = 1.5f;
+    public bool canHitBullet;
 
     public bool canUse3way;
 
@@ -59,5 +62,12 @@ public class PlayerManager : MonoBehaviour
     {
         GameManager gm = FindFirstObjectByType<GameManager>();
         gm.isPause = true;
+    }
+
+    public IEnumerator Invincible(float time)
+    {
+        canHitBullet = false;
+        yield return new WaitForSeconds(time);
+        canHitBullet = true;
     }
 }

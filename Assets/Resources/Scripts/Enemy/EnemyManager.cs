@@ -110,7 +110,11 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 
     public void OnPlayerTouch(PlayerController player, PlayerManager manager)
     {
-        manager.ChangeHP(-1);
+        if (manager.canHitBullet)
+        {
+            manager.ChangeHP(-1);
+            manager.StartCoroutine(manager.Invincible(manager.invincibleTime));
+        }
         Destroy(gameObject);
     }
 
