@@ -29,7 +29,11 @@ public class Bullet_Enemy : MonoBehaviour , IPlayerInteractive
 
     public void OnPlayerTouch(PlayerController player, PlayerManager manager)
     {
-        manager.ChangeHP(-damage);
+        if (manager.canHitBullet)
+        {
+            manager.ChangeHP(-damage);
+            manager.StartCoroutine(manager.Invincible(manager.invincibleTime));
+        }
         Destroy(gameObject);
     }
 
