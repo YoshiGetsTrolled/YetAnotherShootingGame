@@ -1501,6 +1501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   bulletManager: {fileID: 0}
+  deathParticle: {fileID: 0}
   bulletPatternName: spread3
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
@@ -2045,6 +2046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   bulletManager: {fileID: 0}
+  deathParticle: {fileID: 0}
   bulletPatternName: spread3
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
@@ -2074,6 +2076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   bulletManager: {fileID: 0}
+  deathParticle: {fileID: 0}
   bulletPatternName: spread3
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
@@ -2743,6 +2746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   bulletManager: {fileID: 0}
+  deathParticle: {fileID: 0}
   bulletPatternName: spread3
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}

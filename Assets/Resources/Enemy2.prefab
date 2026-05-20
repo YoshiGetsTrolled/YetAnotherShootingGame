@@ -148,17 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  canShoot: 0
-  shootInterval: 0
-  shootVec: {x: 0, y: 0}
-  shootSpeed: 0
-  playerDir: {x: 0, y: 0}
+  bulletManager: {fileID: 0}
+  deathParticle: {fileID: 4289380527308680863, guid: 00439519692833c4da4d2bce996d0243, type: 3}
   bulletPatternName: spread3
-  pattern:
-    name: spread3
-    interval: 0.5
-    bullets: []
-  bulletController: {fileID: 0}
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   moveSpeed: 0
