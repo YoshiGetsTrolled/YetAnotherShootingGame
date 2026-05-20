@@ -5,8 +5,9 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 {
     [Header("パラメーター")]
     public int hp = 5;
-    [Header("弾")]
+    [Header("オブジェクト参照")]
     public EnemyBulletManager bulletManager;
+    [SerializeField] private GameObject deathParticle;
 
     [Header("弾の管理システム")]
     public string bulletPatternName;
@@ -40,6 +41,11 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
         hp -= damage;
         if (hp <= 0)
         {
+            if (deathParticle)
+            {
+                GameObject particle = Instantiate(deathParticle, transform.position, transform.rotation);
+                Destroy(particle,2f);
+            }
             Destroy(gameObject);
         }
     }
@@ -90,6 +96,11 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
         {
             manager.ChangeHP(-1);
             manager.StartCoroutine(manager.Invincible(manager.invincibleTime));
+        }
+        if (deathParticle)
+        {
+            GameObject particle = Instantiate(deathParticle, transform.position, transform.rotation);
+            Destroy(particle, 2f);
         }
         Destroy(gameObject);
     }
