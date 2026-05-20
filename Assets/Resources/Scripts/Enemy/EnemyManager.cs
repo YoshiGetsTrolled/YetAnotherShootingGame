@@ -5,15 +5,8 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 {
     [Header("パラメーター")]
     public int hp = 5;
-
-    public bool canShoot;
-    public float shootInterval;
-    private float shootTimer;
     [Header("弾")]
-    public Vector2 shootVec;
-    public float shootSpeed;
-    public Vector2 playerDir;
-    private GameObject player;
+    public EnemyBulletManager bulletManager;
 
     [Header("弾の管理システム")]
     public string bulletPatternName;
@@ -26,7 +19,7 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 
     private void Start()
     {
-        player = FindFirstObjectByType<PlayerController>().gameObject;
+        bulletManager = GetComponentInChildren<EnemyBulletManager>();
     }
 
     private void Update()
@@ -38,23 +31,6 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
             transform.position.y < -15)
         {
             Destroy(gameObject);
-        }
-
-        //撃つよん
-        if (canShoot)
-        {
-            shootTimer += Time.deltaTime;
-            if (shootTimer >= shootInterval)
-            {
-                shootTimer = 0;
-            }
-        }
-
-
-        //プレイヤーに向いている、正規化したベクトル
-        if (player != null)
-        {
-            playerDir = (player.transform.position - transform.position).normalized;
         }
     }
 
@@ -95,12 +71,12 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
 
     public void StartShoot()
     {
-        canShoot = true;
+        bulletManager.canShoot = true;
     }
 
     public void StopShoot()
     {
-        canShoot = false;
+        bulletManager.canShoot = false;
     }
 
 

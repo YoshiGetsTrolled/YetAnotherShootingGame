@@ -6,7 +6,10 @@ public class GameEventLoader : MonoBehaviour
 
     public GameEventData Load(string fileName)
     {
-        string path = Application.persistentDataPath + "/" + fileName + ".json";
+        // exe ‚Æ“¯‚¶ƒtƒHƒ‹ƒ_
+        string dir = Directory.GetParent(Application.dataPath).FullName;
+
+        string path = Path.Combine(dir, fileName + ".json");
 
         if (!File.Exists(path))
         {

@@ -7,6 +7,8 @@ public class EnemyBulletManager : MonoBehaviour
     public GameObject bulletPrefab;
 
     [Header("パラメーター")]
+    public bool canShoot;
+    [Space(10)]
     public float fireRate;      //弾を撃つ間隔
     public Vector2 shootDir;    //弾のベクトル（forward）
     public Vector3 spawnPos;    //スポーン位置
@@ -30,12 +32,20 @@ public class EnemyBulletManager : MonoBehaviour
     [Header("同時に複数発射する時の変化量")]
     public Vector3 addBurstShootDir;
     public float addBurstShootSpeed;
+    public Vector3 addBurstPos;
+    
+    private Vector3 defSpawnPos;
 
     private float t;
     private Transform player;
     private void Start()
     {
         player = FindFirstObjectByType<PlayerManager>().GetComponent<Transform>();
+
+        if(isCustomSpawn)
+        {
+            defSpawnPos = spawnPos;
+        }
 
         if (burstAmount == 1)
         {
@@ -53,15 +63,19 @@ public class EnemyBulletManager : MonoBehaviour
         }
         else
         {
-            shootDir = transform.right.normalized; // ← ここが重要
+            shootDir = transform.right.normalized;
         }
 
         if (!isCustomSpawn)
         {
             spawnPos = this.transform.position;
+            defSpawnPos = this.transform.position;
         }
 
-        t += Time.deltaTime;
+        if (canShoot)
+        {
+            t += Time.deltaTime;
+        }
 
         if (t >= fireRate)
         {
@@ -74,6 +88,9 @@ public class EnemyBulletManager : MonoBehaviour
     {
         for (int s = 0; s < spawnAmount; s++)
         {
+            //位置リセット
+            spawnPos = defSpawnPos;
+
             // プレイヤー方向を中心にする
             Vector2 centerDir = shootDir.normalized;
             float baseSpeed = shootSpeed;
@@ -94,11 +111,13 @@ public class EnemyBulletManager : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
                 Bullet_Enemy be = bullet.GetComponent<Bullet_Enemy>();
 
+                //生成した弾のパラメーター設定
                 be.moveVec = dir;
                 be.moveSpeed = baseSpeed;
                 be.damage = damage;
 
                 baseSpeed += addBurstShootSpeed;
+                spawnPos += addBurstPos;
             }
 
             yield return new WaitForSeconds(addFireRate);
