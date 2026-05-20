@@ -12,6 +12,13 @@ public class GameEvent
     public string prefab;
     public Vector2 spawnPos;
     public int HP;
+    [Space(10)]
+    public bool canShoot;
+    public string bulletPrefab;
+    public float fireRate;
+    public int damage;
+    public float rotOffsetEuler;
+
 
     [Header("ˆÚ“®İ’è")]
     public int enemyIndex;

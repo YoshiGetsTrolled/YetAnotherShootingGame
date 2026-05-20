@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [Header("動き")]
     public float moveSpeed = 1f;
     [SerializeField] private Vector2 bulletOffset = new Vector2(0,0.2f);
+    [SerializeField] private float fireRate = 0.1f; // 連射間隔
+    private float fireTimer = 0f;
 
     [Header("リソース")]
     [SerializeField] GameObject bullet;
@@ -33,22 +35,22 @@ public class PlayerController : MonoBehaviour
 
     private void BulletInput()
     {
-        if (Inputs.buttonADown)
+        fireTimer += Time.deltaTime;
+
+        // Aボタン長押しで連射
+        if (Inputs.buttonA && fireTimer >= fireRate)
         {
-            ShootBullet(new Vector2(0, 1),8f);
+            ShootBullet(new Vector2(0, 1), 12f);
+            fireTimer = 0f;
         }
-        if (Inputs.buttonBDown)
+
+        // Bボタン長押しで3way連射
+        if (Inputs.buttonB && pm.canUse3way && fireTimer >= fireRate)
         {
-            if (pm.canUse3way)
-            {
-                ShootBullet(new Vector2(0, 1), 8f);
-
-                //右斜め前
-                ShootBullet(new Vector2(0.3f, 1), 7f);
-
-                //左斜め前
-                ShootBullet(new Vector2(-0.3f, 1), 7f);
-            }
+            ShootBullet(new Vector2(0, 1), 12f);
+            ShootBullet(new Vector2(0.3f, 1), 10f);
+            ShootBullet(new Vector2(-0.3f, 1), 10f);
+            fireTimer = 0f;
         }
     }
 

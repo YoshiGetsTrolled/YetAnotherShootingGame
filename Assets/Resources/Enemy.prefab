@@ -148,11 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  canShoot: 0
-  shootInterval: 0
-  shootVec: {x: 0, y: 0}
-  shootSpeed: 0
-  playerDir: {x: 0, y: 0}
+  bulletManager: {fileID: 0}
   bulletPatternName: spread3
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}

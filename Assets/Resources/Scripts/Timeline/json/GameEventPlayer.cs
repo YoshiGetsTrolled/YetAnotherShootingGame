@@ -34,26 +34,28 @@ public class GameEventTimelinePlayer : MonoBehaviour
         }
     }
 
+    #region EventPlayer
+
+    //時間に応じてイベントを実行
     private void PlayEvent(GameEvent e)
     {
         GameObject prefab = null;
+        GameObject bulletPrefab = null;
         GameManager gm = FindFirstObjectByType<GameManager>();
         switch (e.type)
         {
             case "spawn":
+                //リソースを読み込み
                 prefab = Resources.Load<GameObject>(e.prefab);
-                EnemyManager newEnemy = Instantiate(prefab, e.spawnPos, Quaternion.identity)
-                    .GetComponent<EnemyManager>();
-
-                newEnemy.GetComponent<EnemyManager>().hp = e.HP;
-
-                spawnedEnemies.Add(newEnemy);
+                bulletPrefab = Resources.Load<GameObject>(e.bulletPrefab);
+                //敵生成処理
+                Spawn(e, prefab, bulletPrefab);
                 break;
 
             case "randomSpawn":
                 StartCoroutine(RandomSpawnEvent(e));
-
                 break;
+
             case "move":
                 if (spawnedEnemies[e.enemyIndex] != null)
                 {
@@ -62,14 +64,16 @@ public class GameEventTimelinePlayer : MonoBehaviour
                 break;
 
             case "shoot":
-                if (spawnedEnemies[e.enemyIndex] != null)
+                if (spawnedEnemies[e.enemyIndex] != null && 
+                    spawnedEnemies[e.enemyIndex].bulletManager != null)
                 {
                     spawnedEnemies[e.enemyIndex].StartShoot();
                 }
                 break;
 
             case "stopShoot":
-                if (spawnedEnemies[e.enemyIndex] != null)
+                if (spawnedEnemies[e.enemyIndex] != null &&
+                    spawnedEnemies[e.enemyIndex].bulletManager != null)
                 {
                     spawnedEnemies[e.enemyIndex].StopShoot();
                 }
@@ -90,19 +94,25 @@ public class GameEventTimelinePlayer : MonoBehaviour
         }
     }
 
+    #endregion
+
     public void ResetTimeline()
     {
         timer = 0f;
         index = 0;
     }
 
-    //処理
+    #region EventActions
+
+    //ランダム出現コルーチン
     private IEnumerator RandomSpawnEvent(GameEvent e)
     {
+        //固定シードを設定
         UnityEngine.Random.InitState(e.seed);
+
         if (!e.useSeed)
         {
-            //現在時刻のミリ秒でシード値を初期化
+            //固定シード値を使わない場合、現在時刻のミリ秒でシード値をランダム化
             UnityEngine.Random.InitState(DateTime.Now.Millisecond);
         }
         float t = 0f;
@@ -111,6 +121,7 @@ public class GameEventTimelinePlayer : MonoBehaviour
         {
             t += Time.deltaTime;
 
+            //確率
             float chance = UnityEngine.Random.Range(0f, 100f);
 
             if (chance < e.spawnRate)
@@ -143,13 +154,14 @@ public class GameEventTimelinePlayer : MonoBehaviour
 
                 em.hp = (int)UnityEngine.Random.Range(e.HPRange.x, e.HPRange.y + 1);
 
-                // 移動
+                // 移動先の位置を方向に応じて指定
                 Vector2 endPos = e.canMoveHorizontally
                     ? (dir == 0 ? new Vector2(10, spawnPos.y)
                     : dir == 1 ? new Vector2(-10, spawnPos.y)
                     : new Vector2(spawnPos.x, -6))
                     : new Vector2(spawnPos.x, -6);
 
+                //移動開始させる
                 em.StartMove(spawnPos, endPos, UnityEngine.Random.Range(e.speedRange.x, e.speedRange.y + 1), true);
             }
 
@@ -157,4 +169,33 @@ public class GameEventTimelinePlayer : MonoBehaviour
         }
         yield return null;
     }
+
+    private void Spawn(GameEvent e,GameObject prefab,GameObject bulletPrefab)
+    {
+        //敵を生成
+        EnemyManager newEnemy = Instantiate(prefab, e.spawnPos, Quaternion.identity)
+            .GetComponent<EnemyManager>();
+
+        newEnemy.hp = e.HP;
+
+        //設定されていたら弾を生成
+        if (bulletPrefab != null)
+        {
+            GameObject newBullet = Instantiate(bulletPrefab, 
+                                               newEnemy.transform.position,
+                                               bulletPrefab.transform.rotation,
+                                               newEnemy.transform);
+
+            EnemyBulletManager bulletManager = newBullet.GetComponent<EnemyBulletManager>();
+
+            bulletManager.canShoot = e.canShoot;
+            bulletManager.fireRate = e.fireRate;
+            bulletManager.damage = e.damage;
+            bulletManager.transform.rotation *= Quaternion.Euler(0,0,e.rotOffsetEuler);
+        }
+
+        //リストに追加
+        spawnedEnemies.Add(newEnemy);
+    }
+    #endregion
 }

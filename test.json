@@ -1,0 +1,157 @@
+{
+  "events": [
+    {
+      "type": "spawn",
+      "time": 0,
+      "HP": 2,
+      "prefab": "Enemy",
+      "spawnPos": { "x": -3, "y": 3 },
+      "enemyIndex": 0,
+      "canShoot": false,
+      "bulletPrefab": "B_3wayDown",
+      "fireRate": 1.0,
+      "damage": 1,
+      "rotOffsetEuler": 0
+    },
+
+    {
+      "type": "spawn",
+      "time": 0.5,
+      "HP": 10,
+      "prefab": "Enemy2",
+      "spawnPos": { "x": 3, "y": 3 },
+      "enemyIndex": 1,
+      "canShoot": false,
+      "bulletPrefab": "B_5wayPChase",
+      "fireRate": 0.6,
+      "damage": 1,
+      "rotOffsetEuler": 0
+    },
+
+    {
+      "type": "spawn",
+      "time": 0.5,
+      "HP": 10,
+      "prefab": "Enemy2",
+      "spawnPos": { "x": 2, "y": 3 },
+      "enemyIndex": 2,
+      "canShoot": false,
+      "bulletPrefab": "B_1wayDown",
+      "fireRate": 0.8,
+      "damage": 1,
+      "rotOffsetEuler": 0
+    },
+
+    {
+      "type": "spawn",
+      "time": 0.5,
+      "HP": 10,
+      "prefab": "Enemy2",
+      "spawnPos": { "x": 1, "y": 3 },
+      "enemyIndex": 3,
+      "canShoot": false,
+      "bulletPrefab": "B_1wayDown",
+      "fireRate": 0.8,
+      "damage": 1,
+      "rotOffsetEuler": 0
+    },
+
+    {
+      "type": "spawn",
+      "time": 0.5,
+      "HP": 10,
+      "prefab": "Enemy",
+      "spawnPos": { "x": 0, "y": 3 },
+      "enemyIndex": 4,
+      "canShoot": false,
+      "bulletPrefab": "B_7wayDown",
+      "fireRate": 1.2,
+      "damage": 1,
+      "rotOffsetEuler": 0
+    },
+
+    {
+      "type": "move",
+      "time": 1,
+      "enemyIndex": 0,
+      "start": { "x": -3, "y": 3 },
+      "end": { "x": -1, "y": 1 },
+      "duration": 2,
+      "destroyAfter": false
+    },
+
+    {
+      "type": "move",
+      "time": 1.5,
+      "enemyIndex": 1,
+      "start": { "x": 3, "y": 3 },
+      "end": { "x": 1, "y": 1 },
+      "duration": 2,
+      "destroyAfter": false
+    },
+
+    {
+      "type": "move",
+      "time": 3.5,
+      "enemyIndex": 1,
+      "start": { "x": 1, "y": 1 },
+      "end": { "x": 1, "y": 6 },
+      "duration": 2,
+      "destroyAfter": false
+    },
+
+    {
+      "type": "shoot",
+      "time": 3,
+      "enemyIndex": 0
+    },
+
+    {
+      "type": "scrollSpeedChange",
+      "time": 3.25,
+      "scrollSpeed": 0
+    },
+
+    {
+      "type": "shoot",
+      "time": 3.5,
+      "enemyIndex": 1
+    },
+
+    {
+      "type": "stopShoot",
+      "time": 6,
+      "enemyIndex": 0
+    },
+
+    {
+      "type": "stopShoot",
+      "time": 6.5,
+      "enemyIndex": 1
+    },
+
+    {
+      "type": "scrollSpeedChange",
+      "time": 7,
+      "scrollSpeed": -4
+    },
+
+    {
+      "type": "randomSpawn",
+      "time": 7,
+      "randomSpawnDuration": 30,
+      "spawnRate": 1,
+      "useSeed": true,
+      "seed": 100,
+      "canMoveHorizontally": true,
+      "HPRange": { "x": 1, "y": 3 },
+      "speedRange": { "x": 3, "y": 3 },
+      "prefabs": ["Enemy", "Enemy2"]
+    },
+
+    {
+      "type": "pause",
+      "time": 40
+    }
+  ]
+}
