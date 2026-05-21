@@ -9,7 +9,11 @@ public class GameEventTimelinePlayer : MonoBehaviour
     public GameEventData data;      // JSON から読み込んだイベント
     public EnemyManager enemy;      // 命令を送る対象
     public GameManager gm;
-    
+
+    [Header("ファイル参照用パス")]
+    public string enemiesPath = "Enemies/";
+    public string bulletPath = "BulletPatterns/";
+    public string dialoguePath = "DialogueUI/";
 
     private List<EnemyManager> spawnedEnemies = new List<EnemyManager>();
 
@@ -46,8 +50,8 @@ public class GameEventTimelinePlayer : MonoBehaviour
         {
             case "spawn":
                 //リソースを読み込み
-                prefab = Resources.Load<GameObject>(e.prefab);
-                bulletPrefab = Resources.Load<GameObject>(e.bulletPrefab);
+                prefab = Resources.Load<GameObject>(enemiesPath + e.prefab);
+                bulletPrefab = Resources.Load<GameObject>(bulletPath + e.bulletPrefab);
                 //敵生成処理
                 Spawn(e, prefab, bulletPrefab);
                 break;
@@ -86,6 +90,18 @@ public class GameEventTimelinePlayer : MonoBehaviour
 
             case "scrollSpeedChange":
                 gm.bgScrollSpeed = e.scrollSpeed;
+                break;
+
+            case "startDialogue":
+                GameObject dialogueObject = Resources.Load<GameObject>(dialoguePath + e.dialoguePrefab);
+                if (dialogueObject != null) // nullチェックを追加すると安全
+                {
+                    GameObject dialogue = Instantiate(dialogueObject);
+                }
+                else
+                {
+                    Debug.LogError($"ダイアログが見つかりません: {dialoguePath + e.dialoguePrefab}");
+                }
                 break;
 
             default:
@@ -147,7 +163,7 @@ public class GameEventTimelinePlayer : MonoBehaviour
 
                 // 敵をランダムで選択
                 string prefabName = e.prefabs[UnityEngine.Random.Range(0, e.prefabs.Length)];
-                GameObject prefab = Resources.Load<GameObject>(prefabName);
+                GameObject prefab = Resources.Load<GameObject>(enemiesPath + prefabName);
 
                 var enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
                 var em = enemy.GetComponent<EnemyManager>();
