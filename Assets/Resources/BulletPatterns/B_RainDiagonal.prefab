@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &732795203607826059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6369728184033503339}
+  - component: {fileID: 3219140437112467427}
+  m_Layer: 0
+  m_Name: B_RainDiagonal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6369728184033503339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732795203607826059}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+--- !u!114 &3219140437112467427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732795203607826059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021349ede802e6b44ba2d16ee558ddda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 922076750398575768, guid: 6ee8febc557853f4689b8a5a056966d9, type: 3}
+  fireRate: 0.7
+  shootDir: {x: 0, y: 0}
+  spawnPos: {x: -13, y: 5.25, z: 0}
+  shootSpeed: 5
+  bulletLife: 3
+  burstAmount: 11
+  spawnAmount: 1
+  isChasePlayer: 0
+  isCustomSpawn: 1
+  damage: 1
+  addFireRate: 0
+  addShootDir: {x: 0, y: 0, z: 0.02617695, w: 0.99965733}
+  addShootSpeed: 0
+  addBulletLife: 0
+  addBurstShootDir: {x: 0, y: 0, z: 0}
+  addBurstShootSpeed: 0
+  addBurstPos: {x: 1.5, y: 0, z: 0}

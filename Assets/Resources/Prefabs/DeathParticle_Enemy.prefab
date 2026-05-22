@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8205591569486727417}
   - component: {fileID: 6145828834681618121}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Burst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4913,7 +4913,7 @@ GameObject:
   - component: {fileID: 7830411928285174363}
   - component: {fileID: 3786893076352621973}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

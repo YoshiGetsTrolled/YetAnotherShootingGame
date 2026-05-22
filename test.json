@@ -1,8 +1,14 @@
 {
   "events": [
     {
-      "type": "spawn",
+      "type": "startDialogue",
       "time": 0,
+      "dialoguePrefab": "DialogueUI_Test"
+    },
+    
+    {
+      "type": "spawn",
+      "time": 0.25,
       "HP": 2,
       "prefab": "Enemy",
       "spawnPos": { "x": -3, "y": 3 },
@@ -150,8 +156,15 @@
     },
 
     {
-      "type": "pause",
-      "time": 40
+      "type": "startDialogue",
+      "time": 40,
+      "dialoguePrefab": "L1_Boss"
+    },
+
+    {
+      "type": "spawnBoss",
+      "time": 41,
+      "bossPrefab": "TestBoss"
     }
   ]
 }

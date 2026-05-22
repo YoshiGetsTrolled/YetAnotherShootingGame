@@ -42,6 +42,12 @@ public class GameEvent
 
     [Header("背景スクロール")]
     public int scrollSpeed;
+
+    [Header("ダイアログ")]
+    public string dialoguePrefab;
+
+    [Header("ボス")]
+    public string bossPrefab;
 }
 
 
