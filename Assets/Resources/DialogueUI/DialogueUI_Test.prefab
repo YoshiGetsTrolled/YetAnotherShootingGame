@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeed: 0.025
-  canStopTimer: 0
+  canStopTimer: 1
   charaNameObject: {fileID: 263102279833078845}
   textBox: {fileID: 1104281992340286302}
   imgLeft: {fileID: 5722716665215098866}

@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 922076750398575768, guid: 6ee8febc557853f4689b8a5a056966d9, type: 3}
-  fireRate: 0.35
+  canShoot: 0
+  fireRate: 0.7
   shootDir: {x: 0, y: 0}
   spawnPos: {x: 0, y: 0, z: 0}
   shootSpeed: 3

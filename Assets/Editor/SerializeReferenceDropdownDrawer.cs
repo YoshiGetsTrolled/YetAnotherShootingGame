@@ -11,12 +11,12 @@ using UnityEngine;
 //例：
 //Element0 -> EnemySpawnEvent
 //Element1 -> PauseTimerEvent...など
-[CustomPropertyDrawer(typeof(TimelineEvent), true)]
+
+[CustomPropertyDrawer(typeof(BossMoveEvents), true)]
 public class SerializeReferenceMenuDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        // フィールド全体の高さを返す
         return EditorGUI.GetPropertyHeight(property, true) + EditorGUIUtility.singleLineHeight + 4;
     }
 
@@ -24,21 +24,15 @@ public class SerializeReferenceMenuDrawer : PropertyDrawer
     {
         EditorGUI.BeginProperty(position, label, property);
 
-        // ボタン部分
-        var buttonRect = new Rect(
-            position.x,
-            position.y,
-            position.width,
-            EditorGUIUtility.singleLineHeight
-        );
-
+        var buttonRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
         var type = property.managedReferenceValue?.GetType();
-        var typeName = type != null ? type.Name : "None";
+        var typeName = type != null ? type.Name : "None (クリックしてイベントを選択)";
 
         if (GUI.Button(buttonRect, typeName))
         {
             var menu = new GenericMenu();
-            var baseType = typeof(TimelineEvent);
+            // 修正ポイント：基底クラスを「BossMoveEvents」に変更
+            var baseType = typeof(BossMoveEvents);
 
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(a => a.GetTypes())
@@ -53,20 +47,11 @@ public class SerializeReferenceMenuDrawer : PropertyDrawer
                     property.serializedObject.ApplyModifiedProperties();
                 });
             }
-
             menu.ShowAsContext();
         }
 
-        // ▼フィールド部分（ボタンの下に描画）
-        var fieldRect = new Rect(
-            position.x,
-            position.y + EditorGUIUtility.singleLineHeight + 2,
-            position.width,
-            position.height - EditorGUIUtility.singleLineHeight - 2
-        );
-
+        var fieldRect = new Rect(position.x, position.y + EditorGUIUtility.singleLineHeight + 2, position.width, position.height - EditorGUIUtility.singleLineHeight - 2);
         EditorGUI.PropertyField(fieldRect, property, label, true);
-
         EditorGUI.EndProperty();
     }
 }

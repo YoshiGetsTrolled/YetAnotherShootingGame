@@ -14,6 +14,7 @@ public class GameEventTimelinePlayer : MonoBehaviour
     public string enemiesPath = "Enemies/";
     public string bulletPath = "BulletPatterns/";
     public string dialoguePath = "DialogueUI/";
+    public string bossPath = "Bosses/";
 
     private List<EnemyManager> spawnedEnemies = new List<EnemyManager>();
 
@@ -101,6 +102,14 @@ public class GameEventTimelinePlayer : MonoBehaviour
                 else
                 {
                     Debug.LogError($"ダイアログが見つかりません: {dialoguePath + e.dialoguePrefab}");
+                }
+                break;
+
+            case "spawnBoss":
+                GameObject bossObject = Resources.Load<GameObject>(bossPath + e.bossPrefab);
+                if (bossObject != null)
+                {
+                    GameObject newBoss = Instantiate(bossObject);
                 }
                 break;
 

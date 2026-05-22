@@ -45,6 +45,9 @@ public class GameEvent
 
     [Header("ダイアログ")]
     public string dialoguePrefab;
+
+    [Header("ボス")]
+    public string bossPrefab;
 }
 
 
