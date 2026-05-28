@@ -12,9 +12,31 @@ using UnityEngine;
 //Element0 -> EnemySpawnEvent
 //Element1 -> PauseTimerEvent...など
 
-[CustomPropertyDrawer(typeof(BossMoveEvents), true)]
-public class SerializeReferenceMenuDrawer : PropertyDrawer
+// ==========================================
+// 1. ザコ敵・ステージ用 (TimelineEvent)
+// ==========================================
+[CustomPropertyDrawer(typeof(TimelineEvent), true)]
+public class TimelineEventDrawer : SerializeReferenceMenuDrawerBase
 {
+    protected override Type BaseType => typeof(TimelineEvent);
+}
+
+// ==========================================
+// 2. ボス行動用 (BossMoveEvents)
+// ==========================================
+[CustomPropertyDrawer(typeof(BossMoveEvents), true)]
+public class BossMoveEventDrawer : SerializeReferenceMenuDrawerBase
+{
+    protected override Type BaseType => typeof(BossMoveEvents);
+}
+
+// ==========================================
+// 共通の描画ロジック (ベースクラス)
+// ==========================================
+public abstract class SerializeReferenceMenuDrawerBase : PropertyDrawer
+{
+    protected abstract Type BaseType { get; }
+
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
         return EditorGUI.GetPropertyHeight(property, true) + EditorGUIUtility.singleLineHeight + 4;
@@ -26,17 +48,16 @@ public class SerializeReferenceMenuDrawer : PropertyDrawer
 
         var buttonRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
         var type = property.managedReferenceValue?.GetType();
-        var typeName = type != null ? type.Name : "None (クリックしてイベントを選択)";
+        var typeName = type != null ? type.Name : $"None (クリックして {BaseType.Name} を選択)";
 
         if (GUI.Button(buttonRect, typeName))
         {
             var menu = new GenericMenu();
-            // 修正ポイント：基底クラスを「BossMoveEvents」に変更
-            var baseType = typeof(BossMoveEvents);
 
+            // 各基底クラスを継承しているクラスをすべて取得
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(a => a.GetTypes())
-                .Where(t => baseType.IsAssignableFrom(t) && !t.IsAbstract);
+                .Where(t => BaseType.IsAssignableFrom(t) && !t.IsAbstract);
 
             foreach (var t in types)
             {

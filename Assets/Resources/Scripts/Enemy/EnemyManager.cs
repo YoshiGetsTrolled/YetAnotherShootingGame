@@ -102,7 +102,7 @@ public class EnemyManager : MonoBehaviour , IDamageable , IPlayerInteractive
             GameObject particle = Instantiate(deathParticle, transform.position, transform.rotation);
             Destroy(particle, 2f);
         }
-        Destroy(gameObject);
+        TakeDamage(1);
     }
 
     #endregion

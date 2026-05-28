@@ -11,6 +11,7 @@ public class RandomSpawnEvent : TimelineEvent
     public bool canMoveHorizontally = false;
     public float randomSpawnDuration = 3f;
     public float spawnRate = 30f;
+    public bool useSeed = true;
     public int seed = 100;
 
     private enum Dir
@@ -33,7 +34,15 @@ public class RandomSpawnEvent : TimelineEvent
 
     private System.Collections.IEnumerator SpawnCoroutine(GameManager gm)
     {
-        UnityEngine.Random.InitState(seed);
+        if (useSeed)
+        {
+            UnityEngine.Random.InitState(seed);
+        }
+        else
+        {
+            UnityEngine.Random.InitState(DateTime.Now.Millisecond);
+        }
+
         float t = 0f;
 
         while (t < randomSpawnDuration)
