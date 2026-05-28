@@ -13,88 +13,438 @@ MonoBehaviour:
   m_Name: SpawnTimeline
   m_EditorClassIdentifier: 
   events:
-  - rid: 8947338816498696273
-  - rid: 8947338816498696274
-  - rid: 8947338816498696275
-  - rid: 8947338816498696276
-  - rid: 8947338816498696278
-  - rid: 8947338816498696279
-  - rid: 8947338816498696280
-  - rid: 8947338816498696281
+  - rid: 8947339041960099908
+  - rid: 8947339041960099909
+  - rid: 8947339041960099910
+  - rid: 8947339041960099911
+  - rid: 8947339041960099912
+  - rid: 8947339041960099913
+  - rid: 8947339041960099914
+  - rid: 8947339041960099915
+  - rid: 8947339041960099916
+  - rid: 8947339041960099917
+  - rid: 8947339041960099918
+  - rid: 8947339041960099919
+  - rid: 8947339041960099920
+  - rid: 8947339041960099921
+  - rid: 8947339041960099922
+  - rid: 8947339041960099923
+  - rid: 8947339041960099925
+  - rid: 8947339041960099926
+  - rid: 8947339041960099927
+  - rid: 8947339041960099930
+  - rid: 8947339041960099931
+  - rid: 8947339041960099932
+  - rid: 8947339041960099933
+  - rid: 8947339041960099934
+  - rid: 8947339041960099935
+  - rid: 8947339041960099936
+  - rid: 8947339041960099937
+  - rid: 8947339045592891471
+  - rid: 8947339045592891459
+  - rid: 8947339045592891460
+  - rid: 8947339045592891461
+  - rid: 8947339045592891462
+  - rid: 8947339045592891463
+  - rid: 8947339045592891464
+  - rid: 8947339045592891465
+  - rid: 8947339045592891466
+  - rid: 8947339045592891467
+  - rid: 8947339045592891468
+  - rid: 8947339045592891469
+  - rid: 8947339045592891470
+  - rid: 8947339045592891476
+  - rid: 8947339045592891473
+  - rid: 8947339045592891472
+  - rid: 8947339045592891474
+  - rid: 8947339045592891475
   references:
     version: 2
     RefIds:
-    - rid: 8947338816498696273
+    - rid: 8947339041960099908
+      type: {class: DialogueEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 1
+        dialoguePrefab: {fileID: 1351083595606154070, guid: 5f7dfb45b09a9344ab6e980bfd160d97, type: 3}
+    - rid: 8947339041960099909
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 1.1
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: -7.5, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099910
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 1.101
+        target: {fileID: 0}
+        startPos: {x: -7.5, y: 6}
+        endPos: {x: -7.5, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099911
       type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
       data:
         triggerTime: 1.5
-        enemyPrefab: {fileID: 1670472571953408571, guid: 48710f993de33ed42915b3cf0f85eb75, type: 3}
-        spawnPos: {x: 0, y: 6}
-        HP: 2
-    - rid: 8947338816498696274
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: -6, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099912
       type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
       data:
-        triggerTime: 1.8
+        triggerTime: 1.501
         target: {fileID: 0}
-        startPos: {x: 0, y: 6}
-        endPos: {x: 0, y: -6}
-        duration: 3
+        startPos: {x: -6, y: 6}
+        endPos: {x: -6, y: -6}
+        duration: 5
         destroyAfterMove: 1
-    - rid: 8947338816498696275
+    - rid: 8947339041960099913
       type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
       data:
         triggerTime: 2
-        enemyPrefab: {fileID: 1670472571953408571, guid: 48710f993de33ed42915b3cf0f85eb75, type: 3}
-        spawnPos: {x: -3, y: 6}
-        HP: 1
-    - rid: 8947338816498696276
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: -4.5, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099914
       type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
       data:
-        triggerTime: 2.5
+        triggerTime: 2.001
         target: {fileID: 0}
-        startPos: {x: -3, y: 6}
-        endPos: {x: -3, y: -6}
-        duration: 4
-        destroyAfterMove: 0
-    - rid: 8947338816498696278
+        startPos: {x: -4.5, y: 6}
+        endPos: {x: -4.5, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099915
       type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
       data:
         triggerTime: 2.5
-        enemyPrefab: {fileID: 1670472571953408571, guid: 48710f993de33ed42915b3cf0f85eb75, type: 3}
-        spawnPos: {x: -8, y: 3}
-        HP: 2
-    - rid: 8947338816498696279
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: -3, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099916
       type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
       data:
-        triggerTime: 2.55
+        triggerTime: 2.501
         target: {fileID: 0}
-        startPos: {x: -8, y: 3}
-        endPos: {x: 8, y: 3}
-        duration: 3
+        startPos: {x: -3, y: 6}
+        endPos: {x: -3, y: -6}
+        duration: 5
         destroyAfterMove: 1
-    - rid: 8947338816498696280
-      type: {class: RandomSpawnEvent, ns: , asm: Assembly-CSharp}
+    - rid: 8947339041960099917
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 4
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: 3, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099918
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 4.001
+        target: {fileID: 0}
+        startPos: {x: 3, y: 6}
+        endPos: {x: 3, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099919
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 4.5
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: 1.5, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099920
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 4.501
+        target: {fileID: 0}
+        startPos: {x: 1.5, y: 6}
+        endPos: {x: 1.5, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099921
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
       data:
         triggerTime: 5
-        enemies:
-        - {fileID: 1670472571953408571, guid: 48710f993de33ed42915b3cf0f85eb75, type: 3}
-        - {fileID: 4312091074218807561, guid: 22486d41d76574b458c1648842670d8d, type: 3}
-        HPRange: {x: 1, y: 1}
-        speedRange: {x: 3, y: 3}
-        canMoveHorizontally: 1
-        randomSpawnDuration: 10
-        spawnRate: 1
-        seed: 1444
-    - rid: 8947338816498696281
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: 0, y: 6}
+        HP: 5
+        canShoot: 0
+    - rid: 8947339041960099922
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 5.001
+        target: {fileID: 0}
+        startPos: {x: 0, y: 6}
+        endPos: {x: 0, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099923
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 5.5
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 0}
+        spawnPos: {x: -1.5, y: 6}
+        HP: 3
+        canShoot: 0
+    - rid: 8947339041960099925
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 5.501
+        target: {fileID: 0}
+        startPos: {x: -1.5, y: 6}
+        endPos: {x: -1.5, y: -6}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099926
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 3641962934202101218, guid: 27150d4354f3101479eb41bf8ab8c14c, type: 3}
+        spawnPos: {x: -10, y: 4}
+        HP: 3
+        canShoot: 1
+    - rid: 8947339041960099927
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7.001
+        target: {fileID: 0}
+        startPos: {x: -10, y: 4}
+        endPos: {x: 5, y: 4}
+        duration: 7
+        destroyAfterMove: 1
+    - rid: 8947339041960099930
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7.5
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: 5, y: 4}
+        HP: 3
+        canShoot: 1
+    - rid: 8947339041960099931
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7.501
+        target: {fileID: 0}
+        startPos: {x: 5, y: 4}
+        endPos: {x: -10, y: 4}
+        duration: 7
+        destroyAfterMove: 1
+    - rid: 8947339041960099932
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7.75
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -10, y: 6}
+        HP: 4
+        canShoot: 1
+    - rid: 8947339041960099933
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 7.751
+        target: {fileID: 0}
+        startPos: {x: -10, y: 6}
+        endPos: {x: 6, y: 0}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099934
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 8
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 3641962934202101218, guid: 27150d4354f3101479eb41bf8ab8c14c, type: 3}
+        spawnPos: {x: 5.5, y: 6}
+        HP: 4
+        canShoot: 1
+    - rid: 8947339041960099935
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 8.001
+        target: {fileID: 0}
+        startPos: {x: 5.5, y: 6}
+        endPos: {x: -10, y: 0}
+        duration: 5
+        destroyAfterMove: 1
+    - rid: 8947339041960099936
       type: {class: RandomSpawnEvent, ns: , asm: Assembly-CSharp}
       data:
-        triggerTime: 15
+        triggerTime: 13
         enemies:
-        - {fileID: 1670472571953408571, guid: 48710f993de33ed42915b3cf0f85eb75, type: 3}
-        - {fileID: 4312091074218807561, guid: 22486d41d76574b458c1648842670d8d, type: 3}
+        - {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        - {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
         HPRange: {x: 1, y: 2}
-        speedRange: {x: 1, y: 2}
+        speedRange: {x: 2, y: 3}
         canMoveHorizontally: 0
-        randomSpawnDuration: 10
-        spawnRate: 2
-        seed: 8713
+        randomSpawnDuration: 5
+        spawnRate: 7
+        useSeed: 1
+        seed: 1230985
+    - rid: 8947339041960099937
+      type: {class: RandomSpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 21
+        enemies:
+        - {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        - {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        HPRange: {x: 1, y: 2}
+        speedRange: {x: 3, y: 4}
+        canMoveHorizontally: 1
+        randomSpawnDuration: 7
+        spawnRate: 5
+        useSeed: 1
+        seed: 1234567890
+    - rid: 8947339045592891459
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 30
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 15
+        canShoot: 1
+    - rid: 8947339045592891460
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 30.001
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: -5, y: 2}
+        duration: 1
+        destroyAfterMove: 0
+    - rid: 8947339045592891461
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 30.002
+        enemyPrefab: {fileID: 4312091074218807561, guid: 8b1229ce4df053d41a6cc182fc2399c5, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 15
+        canShoot: 1
+    - rid: 8947339045592891462
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 30.003
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: 1, y: 2}
+        duration: 1
+        destroyAfterMove: 0
+    - rid: 8947339045592891463
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 33
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 15
+        canShoot: 1
+    - rid: 8947339045592891464
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 33.001
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: -6.5, y: 4}
+        duration: 1
+        destroyAfterMove: 0
+    - rid: 8947339045592891465
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 33.002
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 15
+        canShoot: 1
+    - rid: 8947339045592891466
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 33.003
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: 2.5, y: 4}
+        duration: 1
+        destroyAfterMove: 0
+    - rid: 8947339045592891467
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 42
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 6107007265586071494, guid: 40d0f8fce29a4b74c8f12b29a498e57e, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 15
+        canShoot: 1
+    - rid: 8947339045592891468
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 42.001
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: -2, y: 3}
+        duration: 3
+        destroyAfterMove: 0
+    - rid: 8947339045592891469
+      type: {class: EnemySpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 42.002
+        enemyPrefab: {fileID: 1670472571953408571, guid: a7bfe0cf769a92f4b82a470ef455cd72, type: 3}
+        bulletPrefab: {fileID: 8272303320374866588, guid: 77906b0d6295f374d8c2b499a3056f68, type: 3}
+        spawnPos: {x: -2, y: 6}
+        HP: 10
+        canShoot: 1
+    - rid: 8947339045592891470
+      type: {class: EnemyMoveEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 42.003
+        target: {fileID: 0}
+        startPos: {x: -2, y: 6}
+        endPos: {x: -2, y: 3}
+        duration: 3
+        destroyAfterMove: 0
+    - rid: 8947339045592891471
+      type: {class: ScrollSpeedChangeEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 29.99
+        newScrollSpeed: 0
+    - rid: 8947339045592891472
+      type: {class: ScrollSpeedChangeEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 50.25
+        newScrollSpeed: -2
+    - rid: 8947339045592891473
+      type: {class: DialogueEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 50
+        dialoguePrefab: {fileID: 1351083595606154070, guid: b54cac9f2a20b8b48a29fe251eb31f7c, type: 3}
+    - rid: 8947339045592891474
+      type: {class: BossSpawnEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 50.26
+        bossPrefab: {fileID: 3945990662094212218, guid: 8599920009b0412448403fa898e8093a, type: 3}
+        spawnPos: {x: 0, y: 0}
+    - rid: 8947339045592891475
+      type: {class: DialogueEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 55
+        dialoguePrefab: {fileID: 1351083595606154070, guid: f8fe357a9943e5249a05627222fcfd54, type: 3}
+    - rid: 8947339045592891476
+      type: {class: RemoveEnemyEvent, ns: , asm: Assembly-CSharp}
+      data:
+        triggerTime: 49

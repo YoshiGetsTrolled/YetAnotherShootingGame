@@ -65,7 +65,7 @@ public class BossEnemyManager : MonoBehaviour
 
             gm.isPause = false;
 
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 3f);
         }
     }
 
